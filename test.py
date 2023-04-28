@@ -2,15 +2,15 @@ import unittest
 def myfunc(n):
     d = list()
     for i in range(1, n+1):
-        if i%3==0 or i%5==0:
-            temp = ""
-            if i%3==0:
-                temp += "fizz"
-            if i%5==0:
-                temp += "buzz"
-            d.append(temp)
-        else:
+        temp = ""
+        if i%3==0:
+            temp += "fizz"
+        if i%5==0:
+            temp += "buzz"
+        if temp == "":
             d.append(str(i))
+        else:
+            d.append(temp)
     data = " ".join(d)
     return data
 
