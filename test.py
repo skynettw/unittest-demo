@@ -3,12 +3,12 @@ def myfunc(n):
     d = list()
     for i in range(1, n+1):
         if i%3==0 or i%5==0:
-            if i%3==0 and i%5!=0:
-                d.append("fizz")
-            elif i%5==0 and i%3!=0:
-                d.append("buzz")
-            else:
-                d.append("fizzbuzz")
+            temp = ""
+            if i%3==0:
+                temp += "fizz"
+            if i%5==0:
+                temp += "buzz"
+            d.append(temp)
         else:
             d.append(str(i))
     data = " ".join(d)
